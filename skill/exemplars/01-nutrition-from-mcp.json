@@ -1,0 +1,93 @@
+{
+  "case": "01-nutrition-from-mcp",
+  "purpose": "验证以麦当劳 MCP 返回的营养数据作为输入时，脚本能正确求和、评估剩余额度，并在糖数据缺失时标记 missing 且不判定超标。",
+  "how_to_run": {
+    "argv": [
+      "python3",
+      "scripts/nutri_calc.py",
+      "--goal",
+      "fat_loss",
+      "--remaining",
+      "{\"kcal\":700,\"protein_g\":40}",
+      "--items",
+      "<下方 input 的 items 数组 JSON 序列化，并为每个 item 附加 source_hint>"
+    ],
+    "cwd": "技能目录（skill/）"
+  },
+  "input": {
+    "source_hint": "mcp:list-nutrition-foods",
+    "goal": "fat_loss",
+    "remaining": {"kcal": 700, "protein_g": 40},
+    "items": [
+      {
+        "name": "巨无霸",
+        "qty": 1,
+        "source": "mcp",
+        "nutrients": {"kcal": 503, "protein_g": 25, "fat_g": 26, "carb_g": 42, "sodium_mg": 950}
+      },
+      {
+        "name": "中薯条",
+        "qty": 1,
+        "source": "mcp",
+        "nutrients": {"kcal": 320, "protein_g": 4, "fat_g": 16, "carb_g": 41, "sodium_mg": 230}
+      },
+      {
+        "name": "零度可乐（中）",
+        "qty": 1,
+        "source": "mcp",
+        "nutrients": {"kcal": 0, "protein_g": 0, "fat_g": 0, "carb_g": 0, "sodium_mg": 15}
+      }
+    ]
+  },
+  "expected": {
+    "exit_code": 0,
+    "data_source": "explicit",
+    "totals": {
+      "kcal": 823.0,
+      "protein_g": 29.0,
+      "fat_g": 42.0,
+      "carb_g": 83.0,
+      "sodium_mg": 1195.0,
+      "sugar_g": null,
+      "calcium_mg": null
+    },
+    "coverage": {
+      "sugar_g": {"state": "missing", "items_with_value": 0, "items_total": 3},
+      "calcium_mg": {"state": "missing", "items_with_value": 0, "items_total": 3}
+    },
+    "percentages": {
+      "kcal_pct": 41.1,
+      "protein_pct": 48.3,
+      "fat_pct": 60.0,
+      "carb_pct": 27.7,
+      "sodium_pct": 59.8,
+      "sugar_pct": null,
+      "calcium_pct": null
+    },
+    "goal_signals": {
+      "flags": ["high_sodium", "high_fat", "low_protein"],
+      "thresholds": {
+        "sugar_pct_high": 50,
+        "sodium_pct_high": 50,
+        "fat_pct_high": 50,
+        "kcal_pct_high": 50,
+        "sugar_pct_watch": 25,
+        "protein_g_low_fat_loss": 30,
+        "protein_g_low_muscle_gain": 40,
+        "protein_g_low_high_protein": 40
+      }
+    },
+    "budget_eval": {
+      "provided": {"kcal": 700.0, "protein_g": 40.0},
+      "used": {"kcal": 823.0, "protein_g": 29.0},
+      "remaining_after": {"kcal": -123.0, "protein_g": 11.0},
+      "within": {"kcal": false, "protein_g": true},
+      "over_by": {"kcal": 123.0, "protein_g": 0.0},
+      "complete": true
+    },
+    "notes": [
+      "糖：本次输入全部缺失该数据，未计算、未估算。",
+      "钙：本次输入全部缺失该数据，未计算、未估算。"
+    ]
+  }
+}
