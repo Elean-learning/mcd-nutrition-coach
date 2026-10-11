@@ -1,0 +1,9 @@
+# 依赖说明
+
+本技能的两个脚本 scripts/nutri_calc.py 与 scripts/combo_solver.py 仅使用 Python 标准库
+（argparse、itertools、json、os、sys、math），无任何第三方依赖，无需 pip 安装。
+
+- 必需依赖：无（Python 3.8 及以上即可运行）
+- 可选增强：无
+- 网络依赖：仅在需要获取麦当劳 MCP 实时数据时使用；离线兜底表路径完全不需要网络
+- PyYAML：本技能不使用，也未引入
