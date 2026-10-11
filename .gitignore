@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Editor
+*.swp
+*~
+.idea/
+
+# Local overrides / real credentials — NEVER commit these
+.env
+*.env
+*.token
+mcp-config.json
+mcp-config.local.json
+
+# Temp
+*.tmp
+*.log
