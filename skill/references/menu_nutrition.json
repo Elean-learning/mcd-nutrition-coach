@@ -1,0 +1,802 @@
+{
+  "meta": {
+    "role": "offline-fallback",
+    "role_note": "仅在麦当劳 MCP 不可用时使用的离线兜底近似表；正常路径必须优先使用 MCP 工具 list-nutrition-foods 获取真实营养数据。",
+    "source": "approximate",
+    "disclaimer": "本表为离线兜底近似参考，请以麦当劳官方渠道实时营养信息为准。",
+    "updated": "2026-10",
+    "per": "serving",
+    "units": {
+      "kcal": "kcal",
+      "protein_g": "g",
+      "fat_g": "g",
+      "carb_g": "g",
+      "sodium_mg": "mg",
+      "sugar_g": "g"
+    },
+    "notes": "数值为公开常识级近似，仅供离线规划参考，不替代麦当劳官方营养信息；不同门店、配方与份量会有差异。本表不含钙数据，缺失项一律保持缺失，不做估算。"
+  },
+  "dri": {
+    "adult_general": {
+      "kcal": 2000,
+      "protein_g": 60,
+      "fat_g": 70,
+      "carb_g": 300,
+      "sodium_mg": 2000,
+      "sugar_g": 50
+    }
+  },
+  "items": [
+    {
+      "key": "big-mac",
+      "aliases": [
+        "巨无霸",
+        "大麦克",
+        "big mac",
+        "bigmac"
+      ],
+      "name_zh": "巨无霸",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 503,
+        "protein_g": 25,
+        "fat_g": 26,
+        "carb_g": 42,
+        "sodium_mg": 950,
+        "sugar_g": 9
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "double-cheeseburger",
+      "aliases": [
+        "双层吉士汉堡",
+        "双层芝士汉堡",
+        "double cheeseburger"
+      ],
+      "name_zh": "双层吉士汉堡",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 430,
+        "protein_g": 25,
+        "fat_g": 22,
+        "carb_g": 33,
+        "sodium_mg": 920,
+        "sugar_g": 7
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "cheeseburger",
+      "aliases": [
+        "吉士汉堡",
+        "芝士汉堡",
+        "cheeseburger"
+      ],
+      "name_zh": "吉士汉堡",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 300,
+        "protein_g": 15,
+        "fat_g": 13,
+        "carb_g": 30,
+        "sodium_mg": 720,
+        "sugar_g": 6
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "hamburger",
+      "aliases": [
+        "汉堡包",
+        "汉堡",
+        "hamburger"
+      ],
+      "name_zh": "汉堡包",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 250,
+        "protein_g": 12,
+        "fat_g": 9,
+        "carb_g": 30,
+        "sodium_mg": 520,
+        "sugar_g": 5
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "spicy-chicken-burger",
+      "aliases": [
+        "麦辣鸡腿堡",
+        "辣鸡腿堡",
+        "spicy chicken burger",
+        "spicy mcchicken"
+      ],
+      "name_zh": "麦辣鸡腿堡",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 500,
+        "protein_g": 22,
+        "fat_g": 26,
+        "carb_g": 44,
+        "sodium_mg": 980,
+        "sugar_g": 6
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "grilled-chicken-burger",
+      "aliases": [
+        "板烧鸡腿堡",
+        "板烧鸡腿",
+        "grilled chicken burger",
+        "grilled chicken fillet"
+      ],
+      "name_zh": "板烧鸡腿堡",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 420,
+        "protein_g": 27,
+        "fat_g": 18,
+        "carb_g": 38,
+        "sodium_mg": 1100,
+        "sugar_g": 8
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "filet-o-fish",
+      "aliases": [
+        "麦香鱼",
+        "鱼柳堡",
+        "filet-o-fish",
+        "filet of fish"
+      ],
+      "name_zh": "麦香鱼",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 340,
+        "protein_g": 15,
+        "fat_g": 16,
+        "carb_g": 35,
+        "sodium_mg": 750,
+        "sugar_g": 5
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "spicy-chicken-wings",
+      "aliases": [
+        "麦辣鸡翅",
+        "辣鸡翅",
+        "spicy chicken wings",
+        "chicken wings"
+      ],
+      "name_zh": "麦辣鸡翅（每块）",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 120,
+        "protein_g": 9,
+        "fat_g": 8,
+        "carb_g": 4,
+        "sodium_mg": 250,
+        "sugar_g": 0
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "chicken-mcnuggets-4",
+      "aliases": [
+        "麦乐鸡4块",
+        "麦乐鸡(4块)",
+        "chicken mcnuggets 4",
+        "nuggets 4"
+      ],
+      "name_zh": "麦乐鸡（4 块）",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 180,
+        "protein_g": 9,
+        "fat_g": 11,
+        "carb_g": 11,
+        "sodium_mg": 330,
+        "sugar_g": 0
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "chicken-mcnuggets-6",
+      "aliases": [
+        "麦乐鸡6块",
+        "麦乐鸡(6块)",
+        "chicken mcnuggets 6",
+        "nuggets 6"
+      ],
+      "name_zh": "麦乐鸡（6 块）",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 270,
+        "protein_g": 14,
+        "fat_g": 16,
+        "carb_g": 16,
+        "sodium_mg": 490,
+        "sugar_g": 0
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "fries-small",
+      "aliases": [
+        "小薯条",
+        "小薯",
+        "small fries"
+      ],
+      "name_zh": "小薯条",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 230,
+        "protein_g": 3,
+        "fat_g": 11,
+        "carb_g": 29,
+        "sodium_mg": 160,
+        "sugar_g": 0
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "fries-medium",
+      "aliases": [
+        "中薯条",
+        "中薯",
+        "medium fries"
+      ],
+      "name_zh": "中薯条",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 320,
+        "protein_g": 4,
+        "fat_g": 16,
+        "carb_g": 41,
+        "sodium_mg": 230,
+        "sugar_g": 0
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "fries-large",
+      "aliases": [
+        "大薯条",
+        "大薯",
+        "large fries"
+      ],
+      "name_zh": "大薯条",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 420,
+        "protein_g": 5,
+        "fat_g": 21,
+        "carb_g": 54,
+        "sodium_mg": 300,
+        "sugar_g": 0
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "hash-brown",
+      "aliases": [
+        "薯饼",
+        "hash brown",
+        "hashbrown"
+      ],
+      "name_zh": "薯饼",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 150,
+        "protein_g": 2,
+        "fat_g": 9,
+        "carb_g": 16,
+        "sodium_mg": 270,
+        "sugar_g": 0
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "mashed-potato",
+      "aliases": [
+        "鸡汁土豆泥",
+        "土豆泥",
+        "mashed potato"
+      ],
+      "name_zh": "鸡汁土豆泥",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 70,
+        "protein_g": 1,
+        "fat_g": 2,
+        "carb_g": 12,
+        "sodium_mg": 270,
+        "sugar_g": 1
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "corn-cup",
+      "aliases": [
+        "玉米杯",
+        "玉米",
+        "corn cup",
+        "corn"
+      ],
+      "name_zh": "玉米杯",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 70,
+        "protein_g": 3,
+        "fat_g": 1,
+        "carb_g": 15,
+        "sodium_mg": 10,
+        "sugar_g": 5
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "egg-mcmuffin",
+      "aliases": [
+        "吉士蛋麦满分",
+        "吉士蛋堡",
+        "egg mcmuffin"
+      ],
+      "name_zh": "吉士蛋麦满分",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 290,
+        "protein_g": 17,
+        "fat_g": 12,
+        "carb_g": 28,
+        "sodium_mg": 730,
+        "sugar_g": 4
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "sausage-egg-mcmuffin",
+      "aliases": [
+        "猪柳蛋麦满分",
+        "猪柳蛋堡",
+        "sausage egg mcmuffin"
+      ],
+      "name_zh": "猪柳蛋麦满分",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 400,
+        "protein_g": 20,
+        "fat_g": 25,
+        "carb_g": 28,
+        "sodium_mg": 850,
+        "sugar_g": 4
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "bacon-egg-mcmuffin",
+      "aliases": [
+        "烟肉蛋麦满分",
+        "培根蛋堡",
+        "bacon egg mcmuffin"
+      ],
+      "name_zh": "烟肉蛋麦满分",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 350,
+        "protein_g": 17,
+        "fat_g": 19,
+        "carb_g": 27,
+        "sodium_mg": 880,
+        "sugar_g": 3
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "spicy-chicken-mcmuffin",
+      "aliases": [
+        "麦辣鸡腿麦满分",
+        "辣鸡腿堡早餐",
+        "spicy chicken mcmuffin"
+      ],
+      "name_zh": "麦辣鸡腿麦满分",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 350,
+        "protein_g": 16,
+        "fat_g": 18,
+        "carb_g": 33,
+        "sodium_mg": 800,
+        "sugar_g": 5
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "apple-pie",
+      "aliases": [
+        "苹果派",
+        "apple pie"
+      ],
+      "name_zh": "苹果派",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 230,
+        "protein_g": 3,
+        "fat_g": 10,
+        "carb_g": 33,
+        "sodium_mg": 180,
+        "sugar_g": 14
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "red-bean-pie",
+      "aliases": [
+        "红豆派",
+        "red bean pie"
+      ],
+      "name_zh": "红豆派",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 240,
+        "protein_g": 4,
+        "fat_g": 10,
+        "carb_g": 34,
+        "sodium_mg": 160,
+        "sugar_g": 15
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "soft-serve",
+      "aliases": [
+        "圆筒冰淇淋",
+        "甜筒",
+        "soft serve",
+        "ice cream cone"
+      ],
+      "name_zh": "圆筒冰淇淋",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 150,
+        "protein_g": 4,
+        "fat_g": 5,
+        "carb_g": 23,
+        "sodium_mg": 60,
+        "sugar_g": 18
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "mcflurry-oreo",
+      "aliases": [
+        "奥利奥麦旋风",
+        "麦旋风",
+        "mcflurry",
+        "oreo mcflurry"
+      ],
+      "name_zh": "奥利奥麦旋风",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 330,
+        "protein_g": 7,
+        "fat_g": 11,
+        "carb_g": 50,
+        "sodium_mg": 150,
+        "sugar_g": 40
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "sundae-chocolate",
+      "aliases": [
+        "朱古力新地",
+        "巧克力新地",
+        "chocolate sundae",
+        "sundae"
+      ],
+      "name_zh": "朱古力新地",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 280,
+        "protein_g": 6,
+        "fat_g": 9,
+        "carb_g": 45,
+        "sodium_mg": 100,
+        "sugar_g": 36
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "coke-small",
+      "aliases": [
+        "小杯可乐",
+        "小可",
+        "small coke"
+      ],
+      "name_zh": "小杯可乐",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 105,
+        "protein_g": 0,
+        "fat_g": 0,
+        "carb_g": 27,
+        "sodium_mg": 10,
+        "sugar_g": 27
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "coke-medium",
+      "aliases": [
+        "中杯可乐",
+        "中可",
+        "medium coke"
+      ],
+      "name_zh": "中杯可乐",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 145,
+        "protein_g": 0,
+        "fat_g": 0,
+        "carb_g": 37,
+        "sodium_mg": 15,
+        "sugar_g": 37
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "coke-large",
+      "aliases": [
+        "大杯可乐",
+        "大可",
+        "large coke"
+      ],
+      "name_zh": "大杯可乐",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 215,
+        "protein_g": 0,
+        "fat_g": 0,
+        "carb_g": 55,
+        "sodium_mg": 20,
+        "sugar_g": 55
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "diet-coke",
+      "aliases": [
+        "零度可乐",
+        "无糖可乐",
+        "diet coke",
+        "zero coke"
+      ],
+      "name_zh": "零度可乐（无糖）",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 0,
+        "protein_g": 0,
+        "fat_g": 0,
+        "carb_g": 0,
+        "sodium_mg": 15,
+        "sugar_g": 0
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "sprite-medium",
+      "aliases": [
+        "中杯雪碧",
+        "雪碧",
+        "medium sprite",
+        "sprite"
+      ],
+      "name_zh": "中杯雪碧",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 145,
+        "protein_g": 0,
+        "fat_g": 0,
+        "carb_g": 37,
+        "sodium_mg": 15,
+        "sugar_g": 37
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "orange-juice",
+      "aliases": [
+        "橙汁",
+        "美汁源果粒橙",
+        "orange juice",
+        "minute maid"
+      ],
+      "name_zh": "橙汁（美汁源果粒橙）",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 160,
+        "protein_g": 0,
+        "fat_g": 0,
+        "carb_g": 40,
+        "sodium_mg": 10,
+        "sugar_g": 39
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "milk",
+      "aliases": [
+        "牛奶",
+        "鲜奶",
+        "milk"
+      ],
+      "name_zh": "牛奶",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 150,
+        "protein_g": 8,
+        "fat_g": 8,
+        "carb_g": 12,
+        "sodium_mg": 100,
+        "sugar_g": 12
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "black-coffee",
+      "aliases": [
+        "黑咖啡",
+        "美式咖啡",
+        "black coffee",
+        "americano"
+      ],
+      "name_zh": "黑咖啡",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 5,
+        "protein_g": 0,
+        "fat_g": 0,
+        "carb_g": 1,
+        "sodium_mg": 5,
+        "sugar_g": 0
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "latte",
+      "aliases": [
+        "拿铁",
+        "鲜煮咖啡拿铁",
+        "latte"
+      ],
+      "name_zh": "拿铁",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 120,
+        "protein_g": 6,
+        "fat_g": 5,
+        "carb_g": 12,
+        "sodium_mg": 90,
+        "sugar_g": 11
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "garden-salad",
+      "aliases": [
+        "田园蔬菜沙拉",
+        "蔬菜沙拉",
+        "沙拉",
+        "garden salad",
+        "salad"
+      ],
+      "name_zh": "田园蔬菜沙拉",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 80,
+        "protein_g": 3,
+        "fat_g": 4,
+        "carb_g": 9,
+        "sodium_mg": 200,
+        "sugar_g": 4
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    },
+    {
+      "key": "chicken-katsu-burger",
+      "aliases": [
+        "鸡扒麦满分",
+        "板烧鸡扒堡",
+        "chicken katsu burger"
+      ],
+      "name_zh": "鸡扒堡",
+      "approximate": true,
+      "per": "serving",
+      "nutrients": {
+        "kcal": 440,
+        "protein_g": 24,
+        "fat_g": 20,
+        "carb_g": 40,
+        "sodium_mg": 1050,
+        "sugar_g": 7
+      },
+      "source": "offline-fallback-approximate",
+      "calcium_mg": null
+    }
+  ]
+}
