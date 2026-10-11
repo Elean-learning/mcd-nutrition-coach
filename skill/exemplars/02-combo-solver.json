@@ -1,0 +1,56 @@
+{
+  "case": "02-combo-solver",
+  "purpose": "验证在真实可售候选菜单与硬约束下，求解器能给出满足约束的最优组合，且结果稳定可复现。",
+  "how_to_run": {
+    "argv": [
+      "python3",
+      "scripts/combo_solver.py",
+      "--goal",
+      "protein_first",
+      "--candidates",
+      "<下方 candidates 的 JSON 序列化>",
+      "--constraints",
+      "<下方 constraints 的 JSON 序列化>",
+      "--top",
+      "3"
+    ],
+    "cwd": "技能目录（skill/）"
+  },
+  "input": {
+    "candidates": [
+      {"id": "grilled-chicken", "name": "板烧鸡腿堡", "category": "burger", "price_cny": 22.5, "nutrients": {"kcal": 420, "protein_g": 27, "fat_g": 18, "carb_g": 38, "sodium_mg": 1100, "sugar_g": 8}},
+      {"id": "big-mac", "name": "巨无霸", "category": "burger", "price_cny": 24.5, "nutrients": {"kcal": 503, "protein_g": 25, "fat_g": 26, "carb_g": 42, "sodium_mg": 950, "sugar_g": 9}},
+      {"id": "nuggets-6", "name": "麦乐鸡（6块）", "category": "side", "price_cny": 14.0, "nutrients": {"kcal": 270, "protein_g": 14, "fat_g": 16, "carb_g": 16, "sodium_mg": 490, "sugar_g": 0}},
+      {"id": "milk", "name": "牛奶", "category": "drink", "price_cny": 10.0, "nutrients": {"kcal": 150, "protein_g": 8, "fat_g": 8, "carb_g": 12, "sodium_mg": 100, "sugar_g": 12}},
+      {"id": "salad", "name": "田园蔬菜沙拉", "category": "side", "price_cny": 12.0, "nutrients": {"kcal": 80, "protein_g": 3, "fat_g": 4, "carb_g": 9, "sodium_mg": 200, "sugar_g": 4}},
+      {"id": "zero-coke-m", "name": "零度可乐（中）", "category": "drink", "price_cny": 9.0, "nutrients": {"kcal": 0, "protein_g": 0, "fat_g": 0, "carb_g": 0, "sodium_mg": 15, "sugar_g": 0}}
+    ],
+    "constraints": {
+      "kcal_max": 700,
+      "protein_g_min": 35,
+      "price_cny_max": 35,
+      "max_items": 3
+    },
+    "goal": "protein_first"
+  },
+  "expected": {
+    "exit_code": 0,
+    "pool_size": 6,
+    "combinations_evaluated": 83,
+    "feasible_count": 1,
+    "solutions": [
+      {
+        "rank": 1,
+        "score": 82.0,
+        "items": [
+          {"id": "grilled-chicken", "name": "板烧鸡腿堡", "category": "burger", "qty": 1, "price_cny": 22.5},
+          {"id": "milk", "name": "牛奶", "category": "drink", "qty": 1, "price_cny": 10.0}
+        ],
+        "totals": {"kcal": 570.0, "protein_g": 35.0, "fat_g": 26.0, "carb_g": 50.0, "sodium_mg": 1200.0, "sugar_g": 20.0},
+        "price_cny_total": 32.5,
+        "rationale": {"goal_note": "以蛋白质最大化为主、兼顾热量与钠", "metrics": ["热量 570.0 kcal", "蛋白质 35.0 g", "钠 1200.0 mg", "糖 20.0 g", "合计约 32.5 元（未含优惠券）", "共 2 件"]}
+      }
+    ]
+  },
+  "note": "输入约束互相冲突时脚本返回 NO_SOLUTION 且退出码为 3，不会给出凑合方案。"
+}
