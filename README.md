@@ -42,9 +42,7 @@
 
 ### 2. 在 WorkBuddy 接入 mcd-mcp
 
-打开 WorkBuddy → 左侧【专家·技能·连接器】→【连接器】→ 右上角【自定义连接器】→【配置 MCP】，粘贴 `mcp-config.example.json` 中的内容，将 `${MCD_MCP_TOKEN}` 替换为你的真实 Token 后保存并启用。
-
-> 也可以把 Token 放到环境变量 `MCD_MCP_TOKEN`，配置中保留 `${MCD_MCP_TOKEN}` 占位符，避免明文落盘。
+打开 WorkBuddy → 左侧【专家·技能·连接器】→【连接器】→ 右上角【自定义连接器】→【配置 MCP】，粘贴 `mcp-config.example.json` 中的内容，将`"Bearer YOUR_MCP_TOKEN"` 替换为你的真实 Token 后保存并启用。
 
 ### 3. 安装本 Skill
 
